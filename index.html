@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmulatorJS - Apollo Justice</title>
+    <style>
+        /* Ensures the emulator fits nicely on the page */
+        body, html { margin: 0; padding: 0; background-color: #000; }
+        .emulator-container { width: 100%; height: 100vh; max-width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="emulator-container">
+        <div id="game"></div>
+    </div>
+
+    <script type="text/javascript">
+        // Core configuration variables
+        window.EJS_player = '#game';
+        window.EJS_core = 'nds'; // Nintendo DS core
+        window.EJS_gameUrl = 'https://raw.githubusercontent.com';
+        
+        // Official CDN path to emulator data
+        window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+        
+        // Optional: Set a specific game name for save states
+        window.EJS_gameName = 'Apollo Justice - Ace Attorney';
+    </script>
+    
+    <!-- The Loader script must come AFTER the config variables -->
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
+</html>
